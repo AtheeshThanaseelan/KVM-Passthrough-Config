@@ -13,6 +13,7 @@ Configuration files for KVM passthrough on Ubuntu 22.04.3 LTS
 - The SPICE components had to be removed, as the card would not start with those components. This may be board specific, as passing a different board's ROM allowed the GPU to boot with the SPICE components, albeit with graphical corruption. 
 
 - A patched VBIOS file (patched using https://github.com/Matoking/NVIDIA-vBIOS-VFIO-Patcher/) was passed to the card. The vbios file had to be placed in /usr/share/vgabios to bypass AppArmor file access restrictions. This may or may not be mandatory depending on the GPU board.
+- The hypervisor had to be hidden from the guest, as the legacy card does not support the driver versions where Nvidia enabled virtualization support. 
 
 ## Boot Parameters
 "intel_iommu=on iommu=pt vfio-pci.ids=10de:1049,10de:0e08"
