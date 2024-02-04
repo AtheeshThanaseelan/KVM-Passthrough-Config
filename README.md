@@ -14,7 +14,8 @@ CPU: i7 4770
 
 ## Boot Parameters
 "intel_iommu=on iommu=pt vfio-pci.ids=10de:1049,10de:0e08"
-This parameters are specific to Intel CPUs, as well as the PCI IDs of the graphics card and its HDMI controller.
+
+These parameters are specific to Intel CPUs, as well as the PCI IDs of the graphics card and its HDMI controller.
 
 
 
